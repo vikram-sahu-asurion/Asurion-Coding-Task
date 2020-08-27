@@ -23,9 +23,9 @@ class ViewController: UITableViewController {
     @IBOutlet weak var btnCallLeadingSpace: NSLayoutConstraint!
     @IBOutlet weak var headerView: UIView!
     
-    // Pets Array- this array will store the all list of pets from backend
-    internal var petsArray = [PetInfo]() {
-        didSet{
+    // ViewModel Array- this array will store the all list of pets from backend
+    var viewModel = PetsViewModel() {
+        didSet {
             DispatchQueue.main.async() {
                 self.tableView.reloadData()
             }
@@ -56,11 +56,13 @@ class ViewController: UITableViewController {
     
     // Backend Call to fetch the data
     func fetchDataFromServer() {
+        // Fetching Configuration
         NetworkManager.shared.fetchConfig { result in
             switch result {
             case .success(let configModel):
                 DispatchQueue.main.async() {
-                    self.setupConfiguration(config: configModel)
+                    self.viewModel.setConfiguration(config: configModel.settings)
+                    self.setupConfiguration(config: self.viewModel.configuration)
                 }
                 
             case.failure(error: let err):
@@ -71,10 +73,11 @@ class ViewController: UITableViewController {
             
         }
         
+        // Fetching Pets information
         NetworkManager.shared.fetchPetsData { result in
             switch result {
             case .success(let petsModel):
-                self.petsArray = petsModel.pets
+                self.viewModel.setPetsList(petsModel: petsModel)
                 
             case.failure(error: let err):
                 DispatchQueue.main.async() {
@@ -84,12 +87,12 @@ class ViewController: UITableViewController {
         }
     }
     
-    func setupConfiguration(config: ConfigModel) {
-        workingHours = config.settings.workHours ?? ""
-        lblOfficeHours.text = "Office Hours: " + (config.settings.workHours ?? "")
+    func setupConfiguration(config: Configuration) {
+        workingHours = config.workHours
+        lblOfficeHours.text = "Office Hours: " + config.workHours
         
-        let isCallEnable = config.settings.isCallEnabled ?? false
-        let isChatEnable = config.settings.isChatEnabled ?? false
+        let isCallEnable = config.isCallEnabled
+        let isChatEnable = config.isChatEnabled
         
         if (isChatEnable && isCallEnable) {
         // Both Call & Chat are enable
@@ -159,7 +162,7 @@ class ViewController: UITableViewController {
     // MARK: - TableViewDataSource
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return petsArray.count
+        return viewModel.petsList.count
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -168,7 +171,7 @@ class ViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: PetsCell.identifier) as? PetsCell {
-            cell.initWithPetInfo(petInfo: petsArray[indexPath.row])
+            cell.initWithPetInfo(petInfo: viewModel.petsList[indexPath.row])
             return cell
         }
          
@@ -178,7 +181,7 @@ class ViewController: UITableViewController {
     // MARK: - TableViewDelegate
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: Constant.segueToPetDetail, sender: petsArray[indexPath.row])
+        self.performSegue(withIdentifier: Constant.segueToPetDetail, sender: viewModel.petsList[indexPath.row])
     }
     
     // MARK: - Navigation
@@ -186,7 +189,7 @@ class ViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Pass the selected object to the new view controller.
         if segue.identifier == Constant.segueToPetDetail {
-            let petInfo = sender as? PetInfo
+            let petInfo = sender as? Pet
             let destinationViewController = segue.destination as? PetDetailViewController
             destinationViewController?.petURL = petInfo?.content_url ?? ""
             destinationViewController?.petName = petInfo?.title ?? ""

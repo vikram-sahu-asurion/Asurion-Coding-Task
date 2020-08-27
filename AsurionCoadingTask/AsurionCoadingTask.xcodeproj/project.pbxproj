@@ -27,6 +27,7 @@
 		4BB800C624F4D9FB0034440E /* AsurionCoadingTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB800C524F4D9FB0034440E /* AsurionCoadingTaskTests.swift */; };
 		4BB800D124F4D9FB0034440E /* AsurionCoadingTaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB800D024F4D9FB0034440E /* AsurionCoadingTaskUITests.swift */; };
 		4BEFF3EB24F7A7C2007AA63A /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BEFF3EA24F7A7C2007AA63A /* WebKit.framework */; };
+		4BEFF3EE24F7CDDA007AA63A /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEFF3ED24F7CDDA007AA63A /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		4BB800D024F4D9FB0034440E /* AsurionCoadingTaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsurionCoadingTaskUITests.swift; sourceTree = "<group>"; };
 		4BB800D224F4D9FB0034440E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4BEFF3EA24F7A7C2007AA63A /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		4BEFF3ED24F7CDDA007AA63A /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,14 +123,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		4B1D10BB24F635BF0064F127 /* UI */ = {
+		4B1D10BB24F635BF0064F127 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				4BB800B424F4D9F50034440E /* Main.storyboard */,
 				4B85A82224F6681B0041AA2F /* PetsList */,
 				4B85A82324F6682B0041AA2F /* PetDetail */,
 			);
-			path = UI;
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		4B36E37E24F6DA2300ECC865 /* Helper */ = {
@@ -195,7 +197,8 @@
 				4B85A81F24F65AE90041AA2F /* Extensions */,
 				4B36E37E24F6DA2300ECC865 /* Helper */,
 				4B1D10AF24F552FB0064F127 /* NetworkService */,
-				4B1D10BB24F635BF0064F127 /* UI */,
+				4BEFF3EC24F7CCD0007AA63A /* ViewModel */,
+				4B1D10BB24F635BF0064F127 /* Controller */,
 				4BB800B724F4D9FB0034440E /* Assets.xcassets */,
 				4BB800B924F4D9FB0034440E /* LaunchScreen.storyboard */,
 				4BB800BC24F4D9FB0034440E /* Info.plist */,
@@ -227,6 +230,14 @@
 				4BEFF3EA24F7A7C2007AA63A /* WebKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4BEFF3EC24F7CCD0007AA63A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4BEFF3ED24F7CDDA007AA63A /* ViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -370,6 +381,7 @@
 				4B1D10B324F5534B0064F127 /* NetworkManager.swift in Sources */,
 				4BB800AF24F4D9F50034440E /* AppDelegate.swift in Sources */,
 				4B36E37D24F6CB0000ECC865 /* Utility.swift in Sources */,
+				4BEFF3EE24F7CDDA007AA63A /* ViewModel.swift in Sources */,
 				4B36E38024F6DA7500ECC865 /* Constant.swift in Sources */,
 				4BB800B124F4D9F50034440E /* SceneDelegate.swift in Sources */,
 				4B1D10BA24F610C80064F127 /* PetsModel.swift in Sources */,

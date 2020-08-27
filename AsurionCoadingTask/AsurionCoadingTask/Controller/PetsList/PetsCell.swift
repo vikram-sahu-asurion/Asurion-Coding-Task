@@ -19,11 +19,11 @@ class PetsCell: UITableViewCell {
         // Initialization code
     }
 
-    func initWithPetInfo(petInfo: PetInfo) {
+    func initWithPetInfo(petInfo: Pet) {
         lblPetName.text = petInfo.title
         
-        if let imgURL = petInfo.image_url {
-            imgView.imageFromServerURL(urlString: imgURL, PlaceHolderImage: UIImage(named: "placeholderImage"))
+        if !petInfo.image_url.isEmpty {
+            imgView.imageFromServerURL(urlString: petInfo.image_url, PlaceHolderImage: UIImage(named: "placeholderImage"))
         }
     }
 }
