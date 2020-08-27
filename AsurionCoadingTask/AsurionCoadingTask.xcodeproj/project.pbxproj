@@ -26,6 +26,7 @@
 		4BB800BB24F4D9FB0034440E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BB800B924F4D9FB0034440E /* LaunchScreen.storyboard */; };
 		4BB800C624F4D9FB0034440E /* AsurionCoadingTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB800C524F4D9FB0034440E /* AsurionCoadingTaskTests.swift */; };
 		4BB800D124F4D9FB0034440E /* AsurionCoadingTaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB800D024F4D9FB0034440E /* AsurionCoadingTaskUITests.swift */; };
+		4BEFF3EB24F7A7C2007AA63A /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BEFF3EA24F7A7C2007AA63A /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		4BB800CC24F4D9FB0034440E /* AsurionCoadingTaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AsurionCoadingTaskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BB800D024F4D9FB0034440E /* AsurionCoadingTaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsurionCoadingTaskUITests.swift; sourceTree = "<group>"; };
 		4BB800D224F4D9FB0034440E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4BEFF3EA24F7A7C2007AA63A /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BEFF3EB24F7A7C2007AA63A /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,6 +173,7 @@
 				4BB800C424F4D9FB0034440E /* AsurionCoadingTaskTests */,
 				4BB800CF24F4D9FB0034440E /* AsurionCoadingTaskUITests */,
 				4BB800AC24F4D9F50034440E /* Products */,
+				4BEFF3E924F7A7C2007AA63A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -215,6 +219,14 @@
 				4BB800D224F4D9FB0034440E /* Info.plist */,
 			);
 			path = AsurionCoadingTaskUITests;
+			sourceTree = "<group>";
+		};
+		4BEFF3E924F7A7C2007AA63A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4BEFF3EA24F7A7C2007AA63A /* WebKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
