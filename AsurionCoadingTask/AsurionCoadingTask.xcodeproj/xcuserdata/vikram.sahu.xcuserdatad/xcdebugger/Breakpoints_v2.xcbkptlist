@@ -7,48 +7,48 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "9D41B968-4717-490D-8FD8-F57BDD061CF3"
+            uuid = "CDEB8D8F-9EEF-4931-8747-0B4AB8B71E25"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AsurionCoadingTaskTests/AsurionCoadingTaskTests.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
-            landmarkName = "testHasPetsListAvailable()"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
+            landmarkName = "testCheckAvailabilityLogic()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "13F33AB8-EC05-4C01-994C-4A73F0753D85"
+            uuid = "5590B3F7-5E62-4D5C-A65E-E2C4072B0F76"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "AsurionCoadingTask/NetworkService/NetworkManager.swift"
+            filePath = "AsurionCoadingTaskTests/AsurionCoadingTaskTests.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
-            landmarkName = "fetchPetsData(completion:)"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
+            landmarkName = "checkForAvailbility(forDate:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "D7C2C945-4689-45A4-810C-73E2C4167E1E"
+            uuid = "DF0F2D38-CC0A-48C5-9890-6509A57F188E"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "AsurionCoadingTask/NetworkService/NetworkManager.swift"
+            filePath = "AsurionCoadingTaskTests/AsurionCoadingTaskTests.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "fetchConfig(completion:)"
+            startingLineNumber = "143"
+            endingLineNumber = "143"
+            landmarkName = "checkForAvailbility(forDate:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
