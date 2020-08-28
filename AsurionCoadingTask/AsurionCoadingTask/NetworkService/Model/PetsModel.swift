@@ -10,10 +10,10 @@ import Foundation
 
 struct PetInfo: Codable {
     
-    let image_url: String?
-    let title: String?
-    let content_url: String?
-    let date_added: String?
+    let image_url: String
+    let title: String
+    let content_url: String
+    let date_added: String
 }
 
 struct PetsModel: Codable{

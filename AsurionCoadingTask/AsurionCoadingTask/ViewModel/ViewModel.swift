@@ -11,35 +11,31 @@ import UIKit
 struct PetsViewModel {
     
     var petsList = [Pet]()
-    var configuration = Configuration()
+    var configuration = Configuration(isChatEnabled: false, isCallEnabled: false, workHours: "")
     
     mutating func setPetsList(petsModel: PetsModel) {
         
         for petObj in petsModel.pets {
-            var pet = Pet()
-            pet.title = petObj.title ?? ""
-            pet.image_url = petObj.image_url ?? ""
-            pet.content_url = petObj.content_url ?? ""
-            
+            let pet = Pet(image_url: petObj.image_url, title: petObj.title, content_url: petObj.content_url)
             self.petsList.append(pet)
         }
     }
     
     mutating func setConfiguration(config: Config) {
-        configuration.isChatEnabled = config.isChatEnabled ?? false
-        configuration.isCallEnabled = config.isCallEnabled ?? false
-        configuration.workHours = config.workHours ?? ""
+        configuration.isChatEnabled = config.isChatEnabled
+        configuration.isCallEnabled = config.isCallEnabled
+        configuration.workHours = config.workHours
     }
 }
 
 struct Pet {
-    var image_url: String = ""
-    var title: String = ""
-    var content_url: String = ""
+    var image_url: String
+    var title: String
+    var content_url: String
 }
 
 struct Configuration {
-    var isChatEnabled: Bool = false
-    var isCallEnabled: Bool = false
-    var workHours: String = ""
+    var isChatEnabled: Bool
+    var isCallEnabled: Bool
+    var workHours: String
 }

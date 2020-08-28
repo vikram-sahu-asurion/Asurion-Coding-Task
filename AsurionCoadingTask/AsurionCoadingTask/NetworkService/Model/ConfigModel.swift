@@ -10,9 +10,9 @@ import Foundation
 
 struct Config: Codable {
     
-    let isChatEnabled: Bool?
-    let isCallEnabled: Bool?
-    let workHours: String?
+    let isChatEnabled: Bool
+    let isCallEnabled: Bool
+    let workHours: String
 }
 
 struct ConfigModel: Codable{
