@@ -146,12 +146,10 @@ class ViewController: UITableViewController {
             
             let closeHourMin = closeTimeAsString.components(separatedBy: ":")
             if closeHourMin.count == 2 {
-                let closeHour = openHourMin[0]
-                let closeMin = openHourMin[1]
+                let closeHour = closeHourMin[0]
+                let closeMin = closeHourMin[1]
                 close = Calendar.current.date(bySettingHour: Int(closeHour) ?? 0, minute: Int(closeMin) ?? 0, second: 0, of: Date())!
             }
-            
-            close = Calendar.current.date(bySettingHour: 18, minute: 0, second: 0, of: Date())!
             
             let isFallsInWorkingHours = Date().isBetween(startDate: open, andEndDate: close)
             return isFallsInWorkingHours

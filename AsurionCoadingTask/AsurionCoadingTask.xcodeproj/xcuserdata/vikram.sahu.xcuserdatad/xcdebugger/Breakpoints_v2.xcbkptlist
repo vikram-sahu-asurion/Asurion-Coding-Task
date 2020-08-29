@@ -7,47 +7,31 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "CDEB8D8F-9EEF-4931-8747-0B4AB8B71E25"
+            uuid = "1614DF05-12A6-4960-BF20-8F8BF71EFBFD"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "AsurionCoadingTaskTests/AsurionCoadingTaskTests.swift"
+            filePath = "AsurionCoadingTask/Controller/PetsList/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "100"
-            endingLineNumber = "100"
-            landmarkName = "testCheckAvailabilityLogic()"
+            startingLineNumber = "151"
+            endingLineNumber = "151"
+            landmarkName = "checkForAvailbility()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "5590B3F7-5E62-4D5C-A65E-E2C4072B0F76"
-            shouldBeEnabled = "Yes"
+            uuid = "C8898F14-34B8-4755-A1DC-FA829383F03F"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AsurionCoadingTaskTests/AsurionCoadingTaskTests.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "112"
-            endingLineNumber = "112"
-            landmarkName = "checkForAvailbility(forDate:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "DF0F2D38-CC0A-48C5-9890-6509A57F188E"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "AsurionCoadingTaskTests/AsurionCoadingTaskTests.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "143"
-            endingLineNumber = "143"
+            startingLineNumber = "135"
+            endingLineNumber = "135"
             landmarkName = "checkForAvailbility(forDate:)"
             landmarkType = "7">
          </BreakpointContent>
